@@ -1,15 +1,14 @@
 <?php
 
-include(dirname(__FILE__).'/unit.php');
-include(dirname(__FILE__).'/MyDoctrineTest.class.php');
+include(sfConfig::get('sf_test_dir').'/bootstrap/unit.php');
 
-class MyDoctrineTester
+class sfDoctrineTester
 {
     protected $myTest;
     private $stack;
     final public function __construct($app)
     {
-        $this->myTest = new MyDoctrineTest($app);
+        $this->myTest = new sfDoctrineTest($app);
         $this->stack = array();
     }
     

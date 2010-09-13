@@ -1,6 +1,6 @@
 <?php
 
-class MyDoctrineTest
+class sfDoctrineTest
 {
     private $connection;
     
