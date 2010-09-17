@@ -131,4 +131,7 @@ class sfDoctrineTester
         }
         return $sRes;
     }
+
+    public function preExecute($t) {}
+    public function postExecute($t) {}
 }
