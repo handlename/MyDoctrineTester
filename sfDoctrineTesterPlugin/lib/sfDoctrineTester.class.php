@@ -38,6 +38,9 @@ class sfDoctrineTester
                 }
             }
         }
+
+        // テスト前処理の実行
+        $this->preExecute($t);
         
         // テストの実行
         if(!$argv || count($argv) == 1){
@@ -47,6 +50,9 @@ class sfDoctrineTester
             // 引数が指定されている場合は、その名前のテストを実行
             $this->executeByArgv($t, $lime_test, $class_methods, $argv);
         }
+
+        // テスト後処理の実行
+        $this->postExecute($t);
     }
     
     final private function execute($t, $lime_test, $class_methods)
